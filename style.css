@@ -1,0 +1,151 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: sans-serif;
+	min-height: 100vh;
+	background-color: lightgreen;
+}
+
+header{
+	font-size: 1.5rem;
+	color: green;
+}
+
+header,form{
+	min-height: 20vh;
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+form input, form button{
+	padding: 0.5rem;
+	font-size: 1.7rem;
+	outline: none;
+	border: none;
+}
+
+form button{
+	margin-left: -39px;
+	background-color: white;
+	outline: none;
+	font-size: 1.5rem;
+	background-color: lightgreen;
+	color: white;
+	transition: all 0.3s ease;
+}
+
+form button:hover{
+	background-color: green;
+	cursor: pointer;
+	color: white;
+}
+
+.todo-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.todo-list{
+	min-width: 27%;
+	list-style-type: none;
+}
+
+.todo{
+	margin: 0.5rem;
+	background: white;
+	color: black;
+	font-size: 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: all 0.3s ease;
+}
+
+.todo li{
+	flex: 1;	
+}
+
+.complete-btn, .trash-btn{
+	padding: 1rem;
+	color: white;
+	border: none;
+	outline: none;
+	transition: all 0.3s ease;
+}
+
+.complete-btn{
+	background-color: green;
+}
+
+.trash-btn{
+	background-color: red;	
+}
+
+.complete-btn:hover{
+	transform: scale(1.099);
+	cursor: pointer;
+}
+
+.trash-btn:hover{
+	transform: scale(1.099);
+	cursor: pointer;
+}
+
+.todo-item{
+	padding: 0 0.5rem;
+}
+
+.completed{
+	text-decoration: line-through;
+	opacity: 0.5;
+}
+
+.fall{
+	transform: translateY(5rem) rotateZ(10deg);
+	opacity: 0;
+}
+
+select{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	width: 10rem;
+	padding: 0.98rem;
+	color: green;
+}
+
+.select{
+	padding: 1rem;
+	position: relative;
+	overflow: hidden;
+}
+
+.select::after{
+	content: "\25BC";
+	position: absolute;
+	right: 20px;
+	top: 22px;
+	cursor: pointer;
+	color: white;
+	pointer-events: none;
+	background-color: lightgreen;
+	padding: 0.5rem;
+	transition: all 0.3s ease;
+	border-radius: 3px;
+
+}
+
+.select:hover::after{
+	background-color: green;
+	color: white;
+}
+
